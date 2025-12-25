@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete SMM Panel – Full Preview</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;background:#0f172a;color:#e5e7eb}
+.sidebar{position:fixed;left:0;top:0;width:260px;height:100vh;background:#020617;padding:20px;overflow-y:auto}
+.sidebar h2{color:#38bdf8;text-align:center;margin-bottom:20px}
+.sidebar a{display:block;color:#cbd5f5;text-decoration:none;padding:12px;margin:6px 0;border-radius:8px}
+.sidebar a:hover{background:#1e293b}
+.main{margin-left:260px;padding:30px}
+.section{margin-bottom:50px}
+.section h2{color:#38bdf8;margin-bottom:15px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#020617;padding:20px;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.4)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:14px;border-bottom:1px solid #1e293b;text-align:left}
+.badge{padding:5px 12px;border-radius:20px;font-size:12px}
+.pending{background:#facc15;color:#000}
+.completed{background:#22c55e;color:#000}
+form input,form select,form button{width:100%;padding:12px;margin-top:10px;border-radius:10px;border:1px solid #334155;background:#020617;color:white}
+form button{background:#2563eb;border:none;cursor:pointer}
+form button:hover{background:#1d4ed8}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<h2>Al SMM PANEL</h2>
+<a href="#dashboard">Dashboard</a>
+<a href="#neworder">New Order</a>
+<a href="#orders">Orders</a>
+<a href="#services">Services</a>
+<a href="#balance">Add Balance</a>
+<a href="#payments">Payments</a>
+<a href="#api">API</a>
+<a href="#admin">Admin Panel</a>
+<a href="#settings">Settings</a>
+<a href="#logout">Logout</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- 1 DASHBOARD -->
+<div id="dashboard" class="section">
+<h2>Dashboard</h2>
+<div class="cards">
+<div class="card"><h3>Total Orders</h3><p>542</p></div>
+<div class="card"><h3>Completed Orders</h3><p>480</p></div>
+<div class="card"><h3>Pending Orders</h3><p>62</p></div>
+<div class="card"><h3>Balance</h3><p>$250.00</p></div>
+</div>
+</div>
+
+<!-- 2 NEW ORDER -->
+<div id="neworder" class="section">
+<h2>New Order</h2>
+<div class="card">
+<form>
+<select>
+<option>Instagram Followers</option>
+<option>Instagram Likes</option>
+<option>YouTube Views</option>
+<option>TikTok Followers</option>
+</select>
+<input type="text" placeholder="Order Link">
+<input type="number" placeholder="Quantity">
+<button>Place Order</button>
+</form>
+</div>
+</div>
+
+<!-- 3 ORDERS -->
+<div id="orders" class="section">
+<h2>My Orders</h2>
+<div class="card">
+<table class="table">
+<thead><tr><th>ID</th><th>Service</th><th>Qty</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>#1021</td><td>Instagram Followers</td><td>1000</td><td><span class="badge completed">Completed</span></td></tr>
+<tr><td>#1022</td><td>YouTube Views</td><td>5000</td><td><span class="badge pending">Pending</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- 4 SERVICES -->
+<div id="services" class="section">
+<h2>Services List</h2>
+<div class="cards">
+<div class="card">Instagram Followers – $2 / 1k</div>
+<div class="card">Instagram Likes – $1.5 / 1k</div>
+<div class="card">YouTube Views – $1 / 1k</div>
+<div class="card">TikTok Followers – $3 / 1k</div>
+</div>
+</div>
+
+<!-- 5 BALANCE -->
+<div id="balance" class="section">
+<h2>Add Balance</h2>
+<div class="card">
+<form>
+<input type="number" placeholder="Enter Amount">
+<button>Add Balance</button>
+</form>
+</div>
+</div>
+
+<!-- 6 PAYMENTS -->
+<div id="payments" class="section">
+<h2>Payments</h2>
+<div class="cards">
+<div class="card">Stripe (Card)</div>
+<div class="card">USDT (Crypto)</div>
+<div class="card">Binance Pay</div>
+</div>
+</div>
+
+<!-- 7 API -->
+<div id="api" class="section">
+<h2>API Access</h2>
+<div class="card">
+<p>API Key: <strong>ABC123XYZ</strong></p>
+<p>Endpoint: /api/v2</p>
+</div>
+</div>
+
+<!-- 8 ADMIN PANEL -->
+<div id="admin" class="section">
+<h2>Admin Panel</h2>
+<div class="cards">
+<div class="card">Manage Users</div>
+<div class="card">Manage Orders</div>
+<div class="card">Manage Services</div>
+<div class="card">Revenue Reports</div>
+</div>
+</div>
+
+<!-- 9 SETTINGS -->
+<div id="settings" class="section">
+<h2>Account Settings</h2>
+<div class="card">
+<form>
+<input type="text" placeholder="Username">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="New Password">
+<button>Update</button>
+</form>
+</div>
+</div>
+
+<!-- 10 LOGOUT -->
+<div id="logout" class="section">
+<h2>Logout</h2>
+<div class="card">Click logout to end session</div>
+</div>
+
+</div>
+</body>
+</html>
